@@ -32,10 +32,11 @@ def weather(city_name):
       
   # Checking if response data is 'code'
   elif 'code' in data:
+    # Checking if the status of 'code' is 404000
     if data['code'] == 404000:
       # Calling root_url function for current data
       r, data = root_url(1, city_name, api_key)
-
+      # Checking if response data is 'cod'
       if 'cod' in data:
         # Checking if the status 'cod' is 200
         if data['cod'] == 200:
