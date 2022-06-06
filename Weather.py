@@ -1,3 +1,4 @@
+# DONT CHANGE!
 # Import required library
 import requests
 from datetime import datetime
@@ -29,6 +30,8 @@ def weather(city_name):
       temp = data['result']['temp']['mean'] - 273.15
       # Getting the humidity from the json data
       humidity = data['result']['humidity']['mean']
+      # Getting the precipitation from the json data
+      precipitation = data['result']['precipitation']['mean'] * 730.001
       
   # Checking if response data is 'code'
   elif 'code' in data:
@@ -44,6 +47,7 @@ def weather(city_name):
           temp = data['main']['temp'] - 273.15
           # Getting the humidity from the json data
           humidity = data['main']['humidity']
+          precipitation = 235.51
         else:
           return "Kota tidak terdaftar"
 
@@ -51,4 +55,4 @@ def weather(city_name):
       return "Nama kota tidak boleh kurang dari 3 karakter"
 
   # Returning temp and humidity value
-  return round(temp, 2), humidity
+  return round(temp, 2), humidity, precipitation
