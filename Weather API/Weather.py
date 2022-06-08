@@ -32,27 +32,27 @@ def weather(city_name):
             # Getting rainfall data with equation
             rainfall = data['result']['precipitation']['mean'] * 730.001
 
-        # Checking if response data is 'code'
-        elif 'code' in data:
-            # Checking if the status of 'code' is 404000
-            if data['code'] == 404000:
-                # Calling root_url function for current data
-                r, data = root_url(1, city_name, api_key)
-                # Checking if response data is 'cod'
-                if 'cod' in data:
-                    # Checking if the status 'cod' is 200
-                    if data['cod'] == 200:
-                        # Getting the temperature from the json data
-                        temp = data['main']['temp'] - 273.15
-                        # Getting the humidity from the json data
-                        humidity = data['main']['humidity']
-                        # Using average rainfall data in Indonesia
-                        rainfall = 235.51
-                    else:
-                        return "Kota tidak terdaftar"
-
+    # Checking if response data is 'code'
+    elif 'code' in data:
+        # Checking if the status of 'code' is 404000
+        if data['code'] == 404000:
+            # Calling root_url function for current data
+            r, data = root_url(1, city_name, api_key)
+            # Checking if response data is 'cod'
+            if 'cod' in data:
+                # Checking if the status 'cod' is 200
+                if data['cod'] == 200:
+                    # Getting the temperature from the json data
+                    temp = data['main']['temp'] - 273.15
+                    # Getting the humidity from the json data
+                    humidity = data['main']['humidity']
+                    # Using average rainfall data in Indonesia
+                    rainfall = 235.51
                 else:
-                    return "Nama kota tidak boleh kurang dari 3 karakter"
+                    return "Kota tidak terdaftar"
+
+            else:
+                return "Nama kota tidak boleh kurang dari 3 karakter"
 
     temp = round(temp, 2)
     rainfall = round(rainfall, 2)
