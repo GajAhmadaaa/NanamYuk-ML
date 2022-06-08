@@ -49,10 +49,10 @@ def weather(city_name):
                     # Using average rainfall data in Indonesia
                     rainfall = 235.51
                 else:
-                    return "Kota tidak terdaftar"
+                    return False # Kota tidak terdaftar
 
             else:
-                return "Nama kota tidak boleh kurang dari 3 karakter"
+                return False # Nama kota tidak boleh kurang dari 3 karakter
 
     temp = round(temp, 2)
     rainfall = round(rainfall, 2)
