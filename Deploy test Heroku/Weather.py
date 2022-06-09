@@ -1,10 +1,11 @@
 # Import required library
 import requests
+import config
 from datetime import datetime
 today = datetime.today()
 
 # API Key for OpenWeatherMap API
-api_key = "81c713c1b0fea513c62681c97920daa9"
+api_key = config.api_key
 
 # Function for defining root_url
 def root_url(url_param, city_name, api_key):
