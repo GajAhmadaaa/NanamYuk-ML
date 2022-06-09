@@ -1,12 +1,16 @@
 import tensorflow as tf
 import numpy as np
 import pandas as pd
+import requests
 
 from sklearn.preprocessing import LabelEncoder
 from Weather import weather
 from flask import Flask, request
 
-df = pd.read_csv('dataset.csv')
+response = requests.get("https://storage.googleapis.com/nanamyuk-bucket/model.h5")
+open("model.h5", "wb").write(response.content)
+
+df = pd.read_csv('https://storage.googleapis.com/nanamyuk-bucket/dataset.csv')
 y = df.iloc[:,5].values
 encoder = LabelEncoder()
 encoder.fit_transform(y)

@@ -6,14 +6,14 @@ from sklearn.preprocessing import LabelEncoder
 from Weather import weather
 from flask import Flask, request
 
-app = Flask(__name__)
-
 df = pd.read_csv('crop.csv')
 y = df.iloc[:,5].values
 encoder = LabelEncoder()
 encoder.fit_transform(y)
 
 reconstructed_model = tf.keras.models.load_model("model.h5")
+
+app = Flask(__name__)
 
 @app.route('/predict', methods=['GET'])
 def predict():
