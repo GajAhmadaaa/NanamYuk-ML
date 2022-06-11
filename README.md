@@ -39,7 +39,7 @@ We are making a crop recommendation system for recommending the top 5 crops to b
 # How to run this Flask app locally
 - Clone this repo
 - Open terminal and go to this project's root directory
-- Create your own OpenWeatherMap API_KEY (\*Notes)
+- Create your own OpenWeatherMap API_KEY (\*[Notes](https://github.com/GajAhmadaaa/NanamYuk-ML/blob/main/Weather%20API/readme.md))
 - Create a config.py file and type `api_key="your_api_key"` then save
 - Create and activate a python virtual environment if you want
 - Type `pip install -r requirements.txt`
