@@ -17,23 +17,17 @@ We are making a crop recommendation system for recommending the top 5 crops to b
 - [OpenWeatherMap API](https://openweathermap.org/ "OpenWeatherMap API")
 
 ## Flowchart
+![Flowchart](https://raw.githubusercontent.com/GajAhmadaaa/NanamYuk-ML/main/image/NanamYuk-ML_Flowchart.png)
 
-```flow
-st=>start: Start
-op1=>operation: Send GET requset to API Endpoint
-cond1=>condition: All Paramerters are provided?
-op2=>operation: Internal Error
-cond2=>condition: Checking if city available
-op3=>operation: Return Error Message
-op4=>operation: Getting city data
-op5=>operation: ML Model Predicting
-op6=>operation: Return prediction Result
-e=>end: End
+## Endpoint
+| Endpoint | Method | Return |
+| :------------: |  :------------: |  :------------: |
+| /predict | GET | JSON |
 
-st->op1->cond1
-cond1(yes)->cond2
-cond1(no)->op2->e
-cond2(yes)->op4->op5->op6->e
-cond2(no)->op3->e
-```
+## Parameters
+| Parameter | Expected input | Explanation |
+| :------------: |  :------------: |  :------------: |
+| city | str(city name) | - |
+| soil | int(1, 2 or 3)| 1: Pasir, 2: Lempung, 3: Liat |
+| light | int(1 or 2) | 1: Full sun, 2: Semi shade |
 
