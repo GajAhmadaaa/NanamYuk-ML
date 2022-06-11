@@ -36,3 +36,13 @@ We are making a crop recommendation system for recommending the top 5 crops to b
 | soil | int(1, 2 or 3)| 1: Pasir, 2: Lempung, 3: Liat |
 | light | int(1 or 2) | 1: Full sun, 2: Semi shade |
 
+# How to run this Flask app locally
+- Clone this repo
+- Open terminal and go to this project's root directory
+- Create your own OpenWeatherMap API_KEY (\*Notes)
+- Create a config.py file and type `api_key="your_api_key"` then save
+- Create and activate a python virtual environment if you want
+- Type `pip install -r requirements.txt`
+- Serve the Flask app by typing `flask run`
+- It will run on `http://127.0.0.1:5000`
+
