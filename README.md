@@ -15,6 +15,7 @@ We are making a crop recommendation system for recommending the top 5 crops to b
 - [TensorFlow](https://www.tensorflow.org/ "TensorFlow")
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/ "Flask")
 - [OpenWeatherMap API](https://openweathermap.org/ "OpenWeatherMap API")
+- [Google Colab](https://colab.research.google.com/ "Google Colab")
 
 ## Flowchart
 ![Flowchart](https://raw.githubusercontent.com/GajAhmadaaa/NanamYuk-ML/main/images/NanamYuk!-ML_Flowchart.png)
