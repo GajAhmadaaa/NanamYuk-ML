@@ -17,7 +17,7 @@ We are making a crop recommendation system for recommending the top 5 crops to b
 - [OpenWeatherMap API](https://openweathermap.org/ "OpenWeatherMap API")
 
 ## Flowchart
-![Flowchart](https://raw.githubusercontent.com/GajAhmadaaa/NanamYuk-ML/main/image/NanamYuk-ML_Flowchart.png)
+![Flowchart](https://raw.githubusercontent.com/GajAhmadaaa/NanamYuk-ML/main/images/NanamYuk!-ML_Flowchart.png)
 
 ## Endpoint
 | Endpoint | Method | Return |
