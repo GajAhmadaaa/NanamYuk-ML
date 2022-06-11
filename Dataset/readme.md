@@ -1,4 +1,4 @@
-# Plant Dataset
+# Plants Dataset
 ## List of plants
 1. Bayam Hijau
 2. Tomat
