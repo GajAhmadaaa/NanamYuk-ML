@@ -7,15 +7,20 @@ from sklearn.preprocessing import LabelEncoder
 from Weather import weather
 from flask import Flask, request
 
+'''
+#Used to download the model if needed
 response = requests.get("https://storage.googleapis.com/nanamyuk-bucket/model.h5")
 open("model.h5", "wb").write(response.content)
+'''
 
-df = pd.read_csv('https://storage.googleapis.com/nanamyuk-bucket/dataset.csv')
+dataset_path = 'Dataset/dataset.csv'
+df = pd.read_csv(dataset_path)
 y = df.iloc[:,5].values
 encoder = LabelEncoder()
 encoder.fit_transform(y)
 
-reconstructed_model = tf.keras.models.load_model("model.h5")
+model_path = 'Machine Learning Model/model.h5'
+reconstructed_model = tf.keras.models.load_model(model_path)
 
 app = Flask(__name__)
 
